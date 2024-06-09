@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetado Web</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header id="header">
+        <div id="center">
+            <!-- Contenido de nuestra cabecera -->
+            <!-- Logo -->
+            <div id="logo">
+                <img src="/assets/css/images/Cuadrado.jpg" class="app-logo" alt="Logotipo">
+                <span id="brand">
+                    <strong>Ulises</strong> Martínez
+                </span>
+            </div>
+            <!-- MENÚ -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./formulario.html">Formulario</a></li>
+                    <li><a href="#">Página 1</a></li>
+                </ul>
+            </nav>
+            <!-- Limpiar flotados -->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <div id="slider" class="slider-big slider-medium">
+        <h1>Bienvenidos a mi Web</h1>
+        <a href="/assets/blog.html" class="btn-white">Ir al blog</a>
+    </div>
+    <!--SIDEBAR-->
+    <div class="center">
+        <section id="content">
+            <h2 class="subheader">Últimos artículos</h2>
+            <!--Listado de artículos-->
+            <div id="articles">
+                <article class="article-ítem" id="article-template">
+                    <div class="image-wrap">
+                        <img src="./css/images/electrodomesticos.jpg" alt="Imagen del artículo">
+
+                    </div>
+                    <h2>Artículos de prueba</h2>
+                    <span class="date">5 minutos</span>
+                    <a href="/assets/Article.html">Leer más</a>
+                    <div class="clearfix"></div>
+
+
+                </article>
+                <!--Mostrar articulos desde JS-->
+            </div>
+        </section>
+        
+         <script>
+            window.addEventListener("load", function() {
+            var template = document.getElementById("article-template");
+            var articles = document.getElementById("articles");
+            for (let i = 1; i <= 5; i++) {
+                var clonado = template.cloneNode(true);
+                clonado.removeAttribute("id");
+                var h2 = clonado.getElementsByTagName("h2")[0];
+                h2.innerHTML = h2.textContent + " " + i;
+                articles.appendChild(clonado);
+            }
+        });
+
+        </script>
+        
+
+
+        <aside id="sidebar">
+            <div id="nav-log" class="sidebar-item">
+                <h3>Creación de artículos</h3>
+                <a href="#" class="btn btn-success">Crear artículos</a>
+            </div>
+
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el artículo que buscas</p>
+                <form>
+                    <input type="text" name="search">
+                    <input type="submit" name="submit" class="btn" value="Buscar">
+                </form>
+            </div>
+        </aside>
+        <!-- Limpiar flotados -->
+        <div class="clearfix"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="center">
+             <p>
+                &copy; Developed by Ulises Martínez 
+             </p> 
+        </div>
+    </footer>
+</body>
+</html>

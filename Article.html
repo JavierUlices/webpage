@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetado Web</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header id="header">
+        <div id="center">
+            <!-- Contenido de nuestra cabecera -->
+            <!-- Logo -->
+            <div id="logo">
+                <img src="/assets/css/images/Cuadrado.jpg" class="app-logo" alt="Logotipo">
+                <span id="brand">
+                    <strong>Ulises</strong> Martínez
+                </span>
+            </div>
+            <!-- MENÚ -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="/assets/index.html">Inicio</a></li>
+                    <li><a href="/assets/blog.html">Blog</a></li>
+                    <li><a href="/assets/formulario.html">Formulario</a></li>
+                    <li><a href="#">Página 1</a></li>
+                </ul>
+            </nav>
+            <!-- Limpiar flotados -->
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+     
+    <!--SIDEBAR-->
+    <div class="center">
+        <section id="content">
+            <!--Listado de artículos-->
+            <article class="article-ítem article-detalle" id="article-template">
+                    <div class="image-wrap">
+                        <img src="./css/images/electrodomesticos.jpg" alt="Imagen del artículo">
+
+                    </div>
+                    <h1 class="subheader">Importancia de los articulos de venta de electrodomesticos</h1>
+                    <span class="date">5 minutos</span>
+                    <p>
+                        Ayudan a preparar y cocinar alimentos y a conservarlos, sirven para la limpieza y regular la temperatura y humedad del ambiente y del agua. También se consideran como electrodomésticos los dispositivos para comunicación y entretenimiento como televisores y equipos de sonido.
+                    </p>
+                    <div class="clearfix"></div>
+
+
+                </article>
+                 
+        </section>
+        
+         
+        
+
+
+        <aside id="sidebar">
+            <div id="nav-log" class="sidebar-item">
+                <h3>Creación de artículos</h3>
+                <a href="#" class="btn btn-success">Crear artículos</a>
+            </div>
+
+            <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el artículo que buscas</p>
+                <form>
+                    <input type="text" name="search">
+                    <input type="submit" name="submit" class="btn" value="Buscar">
+                </form>
+            </div>
+        </aside>
+        <!-- Limpiar flotados -->
+        <div class="clearfix"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="center">
+             <p>
+                &copy; Developed by Ulises Martínez 
+             </p> 
+        </div>
+    </footer>
+</body>
+</html>
